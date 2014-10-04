@@ -24,4 +24,4 @@ def secure_token
   end
 end
 
-Housework::Application.config.secret_key_base = secure_token
+Orchard::Application.config.secret_key_base = secure_token
