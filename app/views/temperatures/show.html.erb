@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @temperature.value %>
+</p>
+
+<p>
+  <strong>Mearsured at:</strong>
+  <%= @temperature.mearsured_at %>
+</p>
+
+<%= link_to 'Edit', edit_temperature_path(@temperature) %> |
+<%= link_to 'Back', temperatures_path %>
