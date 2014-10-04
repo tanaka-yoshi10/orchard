@@ -1,5 +1,6 @@
 class TemperaturesController < ApplicationController
   before_action :set_temperature, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /temperatures
   # GET /temperatures.json
