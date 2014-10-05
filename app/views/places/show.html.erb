@@ -5,5 +5,17 @@
   <%= @place.name %>
 </p>
 
+<h2>Light list </h2>
+<table>
+  <th></th>
+  <th></th>
+  <% Light.all.each do |light| %>
+    <tr>
+      <td><%= light.id %> : <%= light.status %></td>
+      <td><%= link_to "変更",  {:controller => 'lights', :action => 'show', :method => :get}   %></td>
+    </tr>
+   <% end %>
+ </table>
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
