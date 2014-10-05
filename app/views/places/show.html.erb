@@ -18,5 +18,17 @@
    <% end %>
  </table>
 
+<h2>Temperature list </h2>
+<table>
+  <th></th>
+  <th></th>
+  <% Temperature.all.each do |temperature| %>
+    <tr>
+      <td><%= temperature.mearsured_at %></td>
+      <td><%= temperature.value %></td>
+    </tr>
+   <% end %>
+ </table>
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
