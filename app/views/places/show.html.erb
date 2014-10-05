@@ -18,17 +18,7 @@
    <% end %>
  </table>
 
-<h2>Temperature list </h2>
-<table>
-  <th>時刻</th>
-  <th>値</th>
-  <% Temperature.all.each do |temperature| %>
-    <tr>
-      <td><%= temperature.mearsured_at %></td>
-      <td><%= temperature.value %></td>
-    </tr>
-   <% end %>
- </table>
+<%= high_chart("chart-1", @graph) %>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
