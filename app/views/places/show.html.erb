@@ -7,8 +7,8 @@
 
 <h2>Light list </h2>
 <table>
-  <th></th>
-  <th></th>
+  <th>名前</th>
+  <th>状態</th>
   <% Light.all.each do |light| %>
     <tr>
       <td>照明<%= light.id %></td>
@@ -20,8 +20,8 @@
 
 <h2>Temperature list </h2>
 <table>
-  <th></th>
-  <th></th>
+  <th>時刻</th>
+  <th>値</th>
   <% Temperature.all.each do |temperature| %>
     <tr>
       <td><%= temperature.mearsured_at %></td>
