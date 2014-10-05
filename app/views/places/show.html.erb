@@ -11,7 +11,8 @@
   <th></th>
   <% Light.all.each do |light| %>
     <tr>
-      <td><%= light.id %> : <%= light.status %></td>
+      <td>照明<%= light.id %></td>
+      <td><%= light.status %></td>
       <td><%= link_to "変更",  {:controller => 'lights', :action => 'show', :method => :get}   %></td>
     </tr>
    <% end %>
