@@ -13,7 +13,7 @@
     <tr>
       <td>照明<%= light.id %></td>
       <td><%= light.status %></td>
-      <td><%= link_to "変更",  {:controller => 'lights', :action => 'show', :method => :get}   %></td>
+      <td><%= link_to "変更",  {:controller => 'lights', :action => 'edit', :method => :get}   %></td>
     </tr>
    <% end %>
  </table>
