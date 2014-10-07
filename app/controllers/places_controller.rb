@@ -10,16 +10,16 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.json
   def show
-    category = []
+    time = []
     current_quantity = []
     Temperature.all.each do |temperature|
-      category << temperature.mearsured_at.strftime("%H:%M")
+      time << temperature.mearsured_at.strftime("%H:%M")
       current_quantity << temperature.value
     end
 
     @graph = LazyHighCharts::HighChart.new('graph') do |f|
       f.title(text: '室内温度')
-      f.xAxis(categories: category)
+      f.xAxis(categories: time)
       f.series(name: '温度', data: current_quantity)
     end
 
