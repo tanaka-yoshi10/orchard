@@ -4,10 +4,11 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.6'
 
-group :development do
+group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'pry-rails'
+  gem "factory_girl_rails", "~> 4.2.1"
 end
 
 # for heroku
@@ -17,6 +18,9 @@ group :production do
 end
 
 group :test do
+  gem "faker", "~> 1.1.2"
+  gem "database_cleaner", "~> 1.0.1"
+  gem "launchy", "~> 2.3.0"
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara'
 end
